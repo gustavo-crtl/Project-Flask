@@ -14,7 +14,7 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
 
-    <title>Responsive Portfolio Website</title>
+    <title>Gustavo - Portfolio</title>
 </head>
 
 <body>
@@ -26,13 +26,13 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="/ " class="nav__link active-link">
+                        <a href="/" class="nav__link">
                             <i class="uil uil-estate nav__icon"></i> Home
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="/about" class="nav__link">
+                        <a href="/about" class="nav__link active-link">
                             <i class="uil uil-user nav__icon"></i> About
                         </a>
                     </li>
@@ -49,11 +49,11 @@
                         </a>
                     </li>
 
-                    <li class="nav__item">
+                    <!-- <li class="nav__item">
                         <a href="/portfolio" class="nav__link">
                             <i class="uil uil-scenery nav__icon"></i> Portfolio
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="nav__item">
                         <a href="/contacts" class="nav__link">
@@ -82,31 +82,32 @@
             <span class="section__subtitle">My introduction</span>
 
             <div class="about__container container grid">
-                <img src="#" alt="" class="about__img">
+                <img src="{{ url_for('static', filename='img/about.gif')}}" alt="" class="about__img">
 
                 <div class="about__data">
-                    <p class="about__description">Web developer, with extensive knowledge and years of experience,
-                        working in web technologies and Ui / Ux design, delivering quality work.</p>
+                    <p class="about__description">A young student with basic knowledge and a few months of experience in
+                        web development and graphic designer, I always try to deliver quality projects. </p>
 
                     <div class="about__info">
                         <div>
                             <span class="about__info-title">08+</span>
-                            <span class="about__info-name">Years <br> experience</span>
+                            <span class="about__info-name">Months <br> experience</span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">20+</span>
-                            <span class="about__info-name">Completed <br> project</span>
-                        </div>
-
-                        <div>
-                            <span class="about__info-title">05+</span>
+                            <span class="about__info-title">01+</span>
                             <span class="about__info-name">Companies <br> worked</span>
                         </div>
+
+                        <div>
+                            <span class="about__info-title">00+</span>
+                            <span class="about__info-name">Coming <br> Soon</span>
+                        </div>
+
                     </div>
 
                     <div class="about__buttons">
-                        <a download="" href="/responsive-portfolio-website-Alexa/assets/pdf/Alexa-Cv.pdf"
+                        <a download="" href="{{ url_for('static', filename='pdf/Curriculo.pdf')}}"
                             class="button button--flex">
                             Download CV<i class="uil uil-download-alt button__icon"></i>
                         </a>
@@ -115,6 +116,51 @@
             </div>
         </section>
     </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Gustavo</h1>
+                    <span class="footer__subtitle">Frontend developer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="/services" class="footer__link">Services</a>
+                    </li>
+                    <li>
+                        <a href="/skills" class="footer__link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="/contacts" class="footer__link">Contactme</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/gustavo.juvencio.7" target="_blank" class="footer__social">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/meninojuvs/" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+
+                    <a href="https://web.telegram.org" target="_blank" class="footer__social">
+                        <i class="uil uil-telegram-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Copyright Gustavo Juvencio.</p>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
     <!--==================== SWIPER JS ====================-->
     <script src="{{ url_for('static', filename='js/swiper-bundle.min.js')}}"></script>
