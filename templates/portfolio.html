@@ -1,164 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
+    <!--==================== WORK ====================-->
+    <section class="work section" id="work">
+        <h2 class="section__title">Recent Works</h2>
+        <span class="section__subtitle">My Portfolio</span>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div class="work__filters">
+            <span class="work__item active-work" data-filter='all'>All</span>
+            <span class="work__item" data-filter='.web'>Web</span>
+            <span class="work__item" data-filter='.movil'>Movil</span>
+            <span class="work__item" data-filter='.design'>Design</span>
+        </div>
 
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <div class="work__container container grid">
+            <div class="work__card mix web">
+                <img src="{{ url_for('static', filename='img/work1.jpg')}}" alt="" class="work__img">
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css')}}">
+                <h3 class="work__title">Web Design</h3>
 
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
-
-    <title>Gustavo - Portfolio</title>
-</head>
-
-<body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="/" class="nav__logo">Gustavo</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="/" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Skills
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/services" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i> Services
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/portfolio" class="nav__link active-link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfolio
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/contacts" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contact-me
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
-            <div class="nav__btns">
-                <!-- Theme change button -->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== WORK ====================-->
-        <section class="work section" id="work">
-            <h2 class="section__title">Recent Works</h2>
-            <span class="section__subtitle">My Portfolio</span>
-
-            <div class="work__filters">
-                <span class="work__item active-work" data-filter='all'>All</span>
-                <span class="work__item" data-filter='.web'>Web</span>
-                <span class="work__item" data-filter='.movil'>Movil</span>
-                <span class="work__item" data-filter='.design'>Design</span>
+                <a href="#" class="work__button">
+                    Demo <i class="uil uil-angle-double-right work__icon"></i>
+                </a>
             </div>
 
-            <div class="work__container container grid">
-                <div class="work__card mix web">
-                    <img src="{{ url_for('static', filename='img/work1.jpg')}}" alt="" class="work__img">
+            <div class="work__card mix movil">
+                <img src="{{ url_for('static', filename='img/work2.jpg')}}" alt="" class="work__img">
 
-                    <h3 class="work__title">Web Design</h3>
+                <h3 class="work__title">App Movil</h3>
 
-                    <a href="#" class="work__button">
-                        Demo <i class="uil uil-angle-double-right work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="{{ url_for('static', filename='img/work2.jpg')}}" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class="uil uil-angle-double-right work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix design">
-                    <img src="{{ url_for('static', filename='img/work3.jpg')}}" alt="" class="work__img">
-
-                    <h3 class="work__title">Brand Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class="uil uil-angle-double-right work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix web">
-                    <img src="{{ url_for('static', filename='img/work4.jpg')}}" alt="" class="work__img">
-
-                    <h3 class="work__title">Web Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class="uil uil-angle-double-right work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="{{ url_for('static', filename='img/work5.jpg')}}" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class="uil uil-angle-double-right work__icon"></i>
-                    </a>
-                </div>
+                <a href="#" class="work__button">
+                    Demo <i class="uil uil-angle-double-right work__icon"></i>
+                </a>
             </div>
-        </section>
-    </main>
 
-    <!--==================== FOOTER ====================-->
-    {% include "footer.html" %}
+            <div class="work__card mix design">
+                <img src="{{ url_for('static', filename='img/work3.jpg')}}" alt="" class="work__img">
 
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
+                <h3 class="work__title">Brand Design</h3>
 
-    <!--==================== MIXITUP FILTER ====================-->
-    <script src="{{ url_for('static', filename='js/mixitup.min.js')}}"></script>
+                <a href="#" class="work__button">
+                    Demo <i class="uil uil-angle-double-right work__icon"></i>
+                </a>
+            </div>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="{{ url_for('static', filename='js/swiper-bundle.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/vendor/typed.js/typed.min.js')}}"></script>
+            <div class="work__card mix web">
+                <img src="{{ url_for('static', filename='img/work4.jpg')}}" alt="" class="work__img">
 
-    <!--==================== MAIN JS ====================-->
-    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
-</body>
+                <h3 class="work__title">Web Design</h3>
 
-</html>
+                <a href="#" class="work__button">
+                    Demo <i class="uil uil-angle-double-right work__icon"></i>
+                </a>
+            </div>
+
+            <div class="work__card mix movil">
+                <img src="{{ url_for('static', filename='img/work5.jpg')}}" alt="" class="work__img">
+
+                <h3 class="work__title">App Movil</h3>
+
+                <a href="#" class="work__button">
+                    Demo <i class="uil uil-angle-double-right work__icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
