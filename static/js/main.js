@@ -23,6 +23,16 @@ if (navClose) {
   });
 }
 
+/*==================== NAV TABS ====================*/
+var currentLocation = location.href;
+var menuItem = document.querySelectorAll(".nav__link");
+var menuLength = menuItem.length;
+for (let i = 0; i < menuLength; i++) {
+  if (menuItem[i].href === currentLocation) {
+    menuItem[i].className = "active-link";
+  }
+}
+
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll(".nav__link");
 
