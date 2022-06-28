@@ -18,9 +18,9 @@ def skills():
 def services():
     return render_template("services.html")
 
-@app.route("/portfolio")
-def portfolio():
-    return render_template("portfolio.html")
+# @app.route("/portfolio")
+# def portfolio():
+#     return render_template("portfolio.html")
 
 @app.route("/contacts")
 def contatos():
