@@ -518,55 +518,55 @@ img {
 
 /* Skills 1 */
 .skills__html {
-  width: 70%;
+  width: 80%;
 }
 .skills__css {
-  width: 55%;
+  width: 70%;
 }
 .skills__js {
-  width: 30%;
+  width: 50%;
 }
 .skills__react {
-  width: 8%;
+  width: 35%;
 }
 .skills__wordpress {
-  width: 32%;
+  width: 55%;
 }
 
 /* Skills 2 */
 .skills__php {
-  width: 4%;
-}
-.skills__node {
-  width: 20%;
-}
-.skills__sql {
   width: 10%;
 }
+.skills__node {
+  width: 40%;
+}
+.skills__sql {
+  width: 20%;
+}
 .skills__python {
-  width: 30%;
+  width: 80%;
 }
 
 /* Skills 3 */
 .skills__illustrator {
-  width: 30%;
+  width: 40%;
 }
 .skills__after {
-  width: 5%;
+  width: 10%;
 }
 .skills__photoshop {
-  width: 40%;
+  width: 60%;
 }
 
 /* Skills 4 */
 .skills__next {
-  width: 3%;
+  width: 20%;
 }
 .skills__flask {
-  width: 12%;
+  width: 30%;
 }
 .skills__django {
-  width: 10%;
+  width: 45%;
 }
 
 .skills__close .skills__list {
