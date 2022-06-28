@@ -23,22 +23,27 @@
                     <span class="about__info-name">Companies <br> worked</span>
                 </div>
 
-                <div>
-                    <span class="about__info-title">00+</span>
-                    <span class="about__info-name">Coming <br> Soon</span>
+
+                <div class="about__buttons">
+                    <a class="button button--flex">
+                        Coming Soon<i class="uil uil-download-alt button__icon"></i>
+                    </a>
+
+                    <div>
+                        <span class="about__info-title">00+</span>
+                        <span class="about__info-name">Coming <br> Soon</span>
+
+                    </div>
+
                 </div>
 
-            </div>
-
-            <div class="about__buttons">
-                <!-- <a download="" href="{{ url_for('static', filename='pdf/Curriculo.pdf')}}" class="button button--flex">
-                    Coming Soon<i class="uil uil-download-alt button__icon"></i>
-                </a> -->
-                <a href="#" class="button button--flex">
-                    Coming Soon<i class="uil uil-download-alt button__icon"></i>
-                </a>
+                <div class="about__buttons">
+                    <a download="" href="{{ url_for('static', filename='pdf/Curriculo.pdf')}}"
+                        class="button button--flex">
+                        Download CV<i class="uil uil-download-alt button__icon"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 {% endblock %}
