@@ -64,19 +64,6 @@
                 </a>
             </div>
         </div>
-        </footer>
-
-        <!--==================== SCROLL TOP ====================-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
-
-        <!--==================== SWIPER JS ====================-->
-        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js')}}"></script>
-        <script src="{{ url_for('static', filename='js/vendor/typed.js/typed.min.js')}}"></script>
-
-        <!--==================== MAIN JS ====================-->
-        <script src="{{ url_for('static', filename='js/main.js')}}"></script>
-        </body>
-
-        </html>
+    </div>
+</section>
+{% endblock %}
