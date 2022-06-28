@@ -1,130 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+    <h2 class="section__title">About me</h2>
+    <span class="section__subtitle">My introduction</span>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="about__container container grid">
+        <img src="{{ url_for('static', filename='img/about.gif')}}" alt="" class="about__img">
 
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <div class="about__data">
+            <p class="about__description">A young student with basic knowledge and a few months of experience in
+                web development and graphic designer, I always try to deliver quality projects. </p>
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css')}}">
-
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
-
-    <title>Gustavo - Portfolio</title>
-</head>
-
-<body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="/" class="nav__logo">Gustavo</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="/" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/about" class="nav__link active-link">
-                            <i class="uil uil-user nav__icon"></i> About
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Skills
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/services" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i> Services
-                        </a>
-                    </li>
-
-                    <!-- <li class="nav__item">
-                        <a href="/portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfolio
-                        </a>
-                    </li> -->
-
-                    <li class="nav__item">
-                        <a href="/contacts" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contact-me
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
-            <div class="nav__btns">
-                <!-- Theme change button -->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-            <h2 class="section__title">About me</h2>
-            <span class="section__subtitle">My introduction</span>
-
-            <div class="about__container container grid">
-                <img src="{{ url_for('static', filename='img/about.gif')}}" alt="" class="about__img">
-
-                <div class="about__data">
-                    <p class="about__description">A young student with basic knowledge and a few months of experience in
-                        web development and graphic designer, I always try to deliver quality projects. </p>
-
-                    <div class="about__info">
-                        <div>
-                            <span class="about__info-title">08+</span>
-                            <span class="about__info-name">Months <br> experience</span>
-                        </div>
-
-                        <div>
-                            <span class="about__info-title">01+</span>
-                            <span class="about__info-name">Companies <br> worked</span>
-                        </div>
-
-                        <div>
-                            <span class="about__info-title">00+</span>
-                            <span class="about__info-name">Coming <br> Soon</span>
-                        </div>
-
-                    </div>
-
-                    <div class="about__buttons">
-                        <a class="button button--flex">
-                            Coming Soon<i class="uil uil-download-alt button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
+            <div class="about__info">
                 <div>
-                    <h1 class="footer__title">Gustavo</h1>
-                    <span class="footer__subtitle">Frontend developer</span>
+                    <span class="about__info-title">08+</span>
+                    <span class="about__info-name">Months <br> experience</span>
                 </div>
 
+                <div>
+                    <span class="about__info-title">01+</span>
+                    <span class="about__info-name">Companies <br> worked</span>
+                </div>
+
+                <div>
+                    <span class="about__info-title">00+</span>
+                    <span class="about__info-name">Coming <br> Soon</span>
+                </div>
+
+<<<<<<< HEAD
                 <ul class="footer__links">
                     <li>
                         <a href="/services" class="footer__link">Services</a>
@@ -150,9 +54,18 @@
                         <i class="uil uil-telegram-alt"></i>
                     </a>
                 </div>
+=======
+>>>>>>> abd51e3ce28eabe6fe399e6650f307be9c949998
             </div>
 
-            <p class="footer__copy">&#169; Copyright Gustavo Juvencio.</p>
+            <div class="about__buttons">
+                <!-- <a download="" href="{{ url_for('static', filename='pdf/Curriculo.pdf')}}" class="button button--flex">
+                    Coming Soon<i class="uil uil-download-alt button__icon"></i>
+                </a> -->
+                <a href="#" class="button button--flex">
+                    Coming Soon<i class="uil uil-download-alt button__icon"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
